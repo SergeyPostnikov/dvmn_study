@@ -1,10 +1,15 @@
 import requests
 
 
-url = 'https://ru.wttr.in/'
-options = '?n?3?M?q?T'
+url = 'https://wttr.in/'
+options = '?n?3?M?q?T?ru'
 
 
-for city in ('Лондон', 'Шереметьево', 'Череповец'):
-    response = requests.get(url + f'/{city}{options}')
-    print(response.text)
+def main(*args=('Лондон', 'Шереметьево', 'Череповец')):
+    for city in args:
+        response = requests.get(f'{url}/{city}{options}')
+        print(response.text)
+
+
+if __name__ == '__main__':
+    main()
