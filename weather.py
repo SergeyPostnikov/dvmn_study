@@ -2,12 +2,21 @@ import requests
 
 
 url = 'https://wttr.in/'
-options = '?n?3?M?q?T?ru'
+options = {
+    "lang": "ru",
+    "n": "",
+    "3": "",
+    "M": "",
+    "q": "",
+    "T": "",
+} 
 
 
-def main(*args=('Лондон', 'Шереметьево', 'Череповец')):
-    for city in args:
-        response = requests.get(f'{url}/{city}{options}')
+
+def main(cities=('Лондон', 'Шереметьево', 'Череповец')):
+    for city in cities:
+        response = requests.get(f'{url}/{city}', params=options)
+        response.raise_for_status()
         print(response.text)
 
 
