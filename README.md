@@ -5,4 +5,5 @@ for quick start use:
 ```
 git clone https://github.com/SergeyPostnikov/dvmn_study.git
 pip install -r requirements.txt
-python weather.py```
+python weather.py
+```
