@@ -4,5 +4,6 @@ This command line application is a client implementation whose purpose is to sho
 for quick start use:
 ```
 git clone https://github.com/SergeyPostnikov/dvmn_study.git
-python pip install -r requirements.txt
-python weather.py```
+pip install -r requirements.txt
+python weather.py
+```
